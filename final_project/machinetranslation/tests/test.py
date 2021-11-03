@@ -10,6 +10,7 @@ class TestEnglishToFrance(unittest.TestCase):
         self.assertEqual(english_to_french(' '),' ')
         self.assertEqual(english_to_french('Hello'),'Bonjour')
         self.assertEqual(english_to_french('Yes'),'Oui')
+        self.assertNotEqual(english_to_french('Hello'),'Hello')
 
 class TestFrenchToEnglish(unittest.TestCase):
     """ This class wil test the french_to_english metohd """
@@ -18,5 +19,6 @@ class TestFrenchToEnglish(unittest.TestCase):
         self.assertEqual(french_to_english(' '),' ')
         self.assertEqual(french_to_english('Bonjour'),'Hello')
         self.assertEqual(french_to_english('Oui'),'Yes')
+        self.assertNotEqual(french_to_english('Bonjour'),'Bonjour')
 
 unittest.main()
